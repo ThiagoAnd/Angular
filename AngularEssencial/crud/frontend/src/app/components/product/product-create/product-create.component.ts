@@ -25,7 +25,7 @@ product: Product ={
   createProduct (): void{
     //no metodo subscribe vou ser avisado quando a resposta chegar
     this.productService.create(this.product).subscribe(()=>{
-
+    this.router.navigate(['/products'])
     this.productService.showMessage('Produto criado')
     })
   }
