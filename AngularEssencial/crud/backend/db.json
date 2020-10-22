@@ -54,6 +54,21 @@
       "name": "novoooo",
       "price": "200",
       "id": 11
+    },
+    {
+      "name": "asdf",
+      "price": "asdf",
+      "id": 12
+    },
+    {
+      "name": "",
+      "price": null,
+      "id": 13
+    },
+    {
+      "name": "oi",
+      "price": "oi",
+      "id": 14
     }
   ]
 }
