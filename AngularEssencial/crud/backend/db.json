@@ -1,11 +1,6 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Caneta BIC",
-      "price": 5.89
-    },
-    {
       "id": 2,
       "name": "Notebook Mac Android",
       "price": "800.89"
@@ -39,16 +34,6 @@
       "name": "4",
       "price": "4",
       "id": 8
-    },
-    {
-      "name": "",
-      "price": null,
-      "id": 9
-    },
-    {
-      "name": "",
-      "price": null,
-      "id": 10
     },
     {
       "name": "novoooo",
