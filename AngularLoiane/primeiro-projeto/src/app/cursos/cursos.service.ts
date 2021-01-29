@@ -12,4 +12,8 @@ http
   getCursos(){
     return ['java','python','angular','pipoca'];
   }
+
+  getAnimais(){
+    return ['coelho','girafa','zebra','unicornio','mamute'];
+  }
 }
