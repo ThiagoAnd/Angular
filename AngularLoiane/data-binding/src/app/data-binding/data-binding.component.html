@@ -1,0 +1,57 @@
+<section>
+    <article>
+        CSS e style binding// fiz outra coisa, só instalei o bootstrap
+<br>
+<!-- O #classeDrop é uma variavel local que vai acessar o OPTION do select-->
+        <select #classeDrop (change)="0" name="" id="">
+            <option value="alert-success">Sucesso</option>
+            <option value="alert-info">Info</option>
+            <option value="alert-warning">Warning</option>
+            <option value="alert-danger">Danger</option>
+        </select>
+        <br>
+        <br>
+     <!-- Aqui é o class binding-->
+     <div class="alert alert-danger" [style.display]="classeDrop.value == 'alert-danger' ? 'block' : 'none' "  
+     role="alert" >
+        Este texto só aparece quando tiver erro selecionado, tem um style binding
+      </div>
+
+          <div class="alert " role="alert" [class.alert-success]="classeDrop.value == 'alert-success'">
+            This is a success alert—check it out!
+          </div>
+
+          <div class="alert " role="alert" [class.alert-danger]="classeDrop.value == 'alert-danger'">
+            This is a danger alert—check it out!
+          </div>
+          <div class="alert " role="alert" [class.alert-warning]="classeDrop.value == 'alert-warning'">
+            This is a warning alert—check it out!
+          </div>
+          <div class="alert " role="alert" [class.alert-info]="classeDrop.value == 'alert-info'">
+            This is a info alert—check it out!
+          </div>
+
+          <div class="alert {{classeDrop.value}}" >
+              Valor colorido conforme combo box
+          </div>
+        
+    </article>
+<br>
+<br>
+<br>
+<br>
+    <article>
+        <h3>
+            Interpolation/interpolação
+        </h3>
+        <p>String renderizada com interpolação: {{url}}</p>
+        <p>Resolvendo matematica dentro da interpolação: {{7+5}}</p>
+        <p>Resolvendo matematica com interpolação e metodo: {{1+1+getValor()}}</p>
+        <p>Interpolação</p>
+        <img src="{{urlImagem}}">
+        <p>Property binding</p>
+        <img [src] = "urlImagem" >
+    </article>
+
+    
+</section>
