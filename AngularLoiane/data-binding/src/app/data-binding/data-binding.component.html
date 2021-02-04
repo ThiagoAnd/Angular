@@ -1,3 +1,32 @@
+
+<section>
+  <article>
+    <h3>Event binding</h3>
+    <button (click)="metodoClicar()" class="btn btn-primary"> Me clique</button>
+    <br>
+    <!--O Dollar é para ser usado quando quiser capturar o evento-->
+    <input type="text" 
+
+    #variavelLocalInputQueReferenciaOEventTarget
+
+    (keyup)="metodoKeyUp($event)"
+    (keyup.enter)="metodoKeyUpEnter($event.target.value)"
+    (blur)="metodoBlurComVariavelLocal(variavelLocalInputQueReferenciaOEventTarget.value)"
+
+    />
+    <p>Valor do input: {{valorAtualInput}}</p>
+   <p>Valor salvo com enter: {{valorSalvoEnter}}</p>
+   <p>Valor quando tira o foco, ou seja quando clica fora do input: {{valorBlur}}</p>
+
+  <br>
+  <span
+  (mouseover)="metodoMouseOver()"
+  (mouseout)="metodoMouseOver()"
+  [class.classeDoSpan]="isMouseBoolean"
+  >Passe o mouse sobre mim, boolean com classe</span>
+  </article>
+</section>
+<br><br>
 <section>
     <article>
         CSS e style binding// fiz outra coisa, só instalei o bootstrap
