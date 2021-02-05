@@ -1,6 +1,39 @@
 
 <section>
   <article>
+    <h3>Two way data binding</h3>
+    <p>o [value]= nome pega a variavel nome e coloca no value</p>
+    <p>O campo de input tem um evento chamado (input) que executa quando o campo é atualizado</p>
+    <input 
+    (input)="nome= $event.target.value"
+    [value]="nome"
+    type="text"/>
+    <br>
+    <p>Utilizando o ngModel abaixo com property e event bind</p>
+    <input 
+    [ngModel]="nome"
+    (ngModelChange)="nome=$event"   
+    type="text"/>
+    <p>Utilizando o two way data bind abaixo. é um bind de propriedade junto com bind de evento</p>
+    <input
+    [(ngModel)]="nome"
+    type="text"
+    />
+    <p>Voce digitou: {{nome}}</p>
+
+    <div>
+<p>Meu nome é {{pessoa.nome}} e eu tenho {{pessoa.idade}} anos de idade</p>
+      <input [(ngModel)]="pessoa.nome"/>
+      <input [(ngModel)]="pessoa.idade"/>
+    </div>
+  </article>
+</section>
+
+<br>
+<br>
+<br>
+<section>
+  <article>
     <h3>Event binding</h3>
     <button (click)="metodoClicar()" class="btn btn-primary"> Me clique</button>
     <br>
