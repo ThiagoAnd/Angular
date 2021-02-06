@@ -2,7 +2,22 @@
 <section>
   <article>
     <h3>
-      Input/Output property
+      Output property
+    </h3>
+   
+    <contador [valor]="valorInicial"
+    (mudouValor)="onMudouValorContador($event)"
+    ></contador>
+  </article>
+</section>
+
+
+<div class="alert alert-secondary" style="width: 1000px;"></div>
+
+<section>
+  <article>
+    <h3>
+      Input property
     </h3>
     <h2>{{nomeCurso}}</h2>
     <app-curso [nome]="nomeCurso"></app-curso>
