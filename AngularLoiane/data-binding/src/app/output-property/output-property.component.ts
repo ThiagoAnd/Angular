@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, Output,EventEmitter } from '@angular/core';
+import { Component, Input, OnInit, Output,EventEmitter, ViewChild, ElementRef } from '@angular/core';
 //import * as EventEmitter from 'events';
 
 @Component({
@@ -14,8 +14,15 @@ export class OutputPropertyComponent implements OnInit {
 //Para expor esse evento não basta só colocar new EventEmitter, tem que colocar o decorator @Output
   @Output() mudouValor = new EventEmitter();
 
+  //Aqui vamos ter acesso ao valor do input direto pelo elemento, sem a necessidade de usar a variavel valor
+  //Inicialmente utilizamos HTMLElement e fazendo um console.log descobrimos que na verdade ele é um ElementRef, então para ir para
+  //os atributos desse elemento, trocamos o HTMLElement para ElementRef em baixo
+  @ViewChild('inputViewChild') valorInputViewChild:ElementRef;
+
   incrementa(){
-    this.valor++;
+    console.log(this.valorInputViewChild)
+    //this.valor++; Vamos mudar para modificar ao inves pelo valor, modificar direto pelo DOM
+    this.valorInputViewChild.nativeElement.value++;
     //vamos emitir o evnto
     this.mudouValor.emit({novoValor:this.valor});
   }
