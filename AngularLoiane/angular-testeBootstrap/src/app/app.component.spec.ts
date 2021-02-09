@@ -20,16 +20,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'angular-cli-bootstrap'`, () => {
+  it(`should have as title 'angular-testeBootstrap'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('angular-cli-bootstrap');
+    expect(app.title).toEqual('angular-testeBootstrap');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-cli-bootstrap app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('angular-testeBootstrap app is running!');
   });
 });

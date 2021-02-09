@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-cli-bootstrap": {
+    "angular-testeBootstrap": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:application": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-cli-bootstrap",
+            "outputPath": "dist/angular-testeBootstrap",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -32,10 +32,7 @@
               "src/styles.css"
             ],
             "scripts": [
-              "node_modules/bootstrap/dist/js/bootstrap.js",
-              "node_modules/jquery/dist/jquery.js"
-             
-
+              "node_modules/jquery/dist/jquery.min.js"
             ]
           },
           "configurations": {
@@ -71,18 +68,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-cli-bootstrap:build"
+            "browserTarget": "angular-testeBootstrap:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-cli-bootstrap:build:production"
+              "browserTarget": "angular-testeBootstrap:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-cli-bootstrap:build"
+            "browserTarget": "angular-testeBootstrap:build"
           }
         },
         "test": {
@@ -119,16 +116,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-cli-bootstrap:serve"
+            "devServerTarget": "angular-testeBootstrap:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-cli-bootstrap:serve:production"
+              "devServerTarget": "angular-testeBootstrap:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-cli-bootstrap"
+  "defaultProject": "angular-testeBootstrap"
 }
