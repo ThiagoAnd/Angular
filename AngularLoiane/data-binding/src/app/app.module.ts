@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-//Para usar o ngModel no input adicionar o forms module
+//Para usar o ngModel no input adicionar o forms module no import aqui em cima e no import la embaixo
 import { FormsModule }   from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -12,7 +12,7 @@ import { OutputPropertyComponent } from './output-property/output-property.compo
 @NgModule({
   declarations: [
     AppComponent,
-    DataBindingComponent,
+    DataBindingComponent, 
     InputPropertyComponent,
     OutputPropertyComponent
   ],
