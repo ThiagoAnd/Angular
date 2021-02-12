@@ -1,0 +1,11 @@
+<p>Exemplo pipes</p>
+
+<br>
+<p>Titulo: {{livro.titulo | uppercase}}</p>
+<p>Numero de paginas: {{livro.numeroPaginas | number}}</p>
+<p>Preco: {{livro.preco | currency:'BRL'}}</p>
+<p>Minimo de uma casa decima a duas casas decimais</p>
+<p>Estrelas: {{4.578724 | number:'2.1-2'}}</p>
+<p>Lançamento: {{livro.lancamento | date:'dd-MM-yyyy'}}</p>
+<br>
+<p>Livro: {{livro | json}}</p>
