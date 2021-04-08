@@ -1,4 +1,10 @@
+import { map } from 'rxjs/operators';
+
+import { Observable, interval } from 'rxjs';
+
+
 import { Component, OnInit } from '@angular/core';
+
 
 @Component({
   selector: 'app-exemplos-pipes',
@@ -12,6 +18,16 @@ export class ExemplosPipesComponent implements OnInit {
     preco: 44.99,
     lancamento: new Date(2016,5,23)
   }
+
+ 
+//Esse codigo abaixo vai atribuir a string valor assincrono para a variavel
+//valorAsync em 2 segundos
+
+  valorAsync = new Promise((resolve,reject)=>{
+
+   setTimeout(() => resolve('Valor assincrono, trabalhando com pipe async'), 2000);
+  });
+
 
   constructor() { }
 
