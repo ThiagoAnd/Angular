@@ -1,1 +1,24 @@
-<button class="btn btn-primary">App component Works</button>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+     
+      <h1  routerLink="/">ProjetoRotas</h1>
+      
+     
+      <span class="menu-spacer"></span>
+   
+      <div>
+        <a mat-button routerLink="/login"> Login </a>
+        <a mat-button routerLink="/cursos"> Cursos </a>
+  
+     
+  
+      </div>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
+      </mat-toolbar-row>
+  </mat-toolbar>
+<div class="row">
+<router-outlet></router-outlet>
+</div>
