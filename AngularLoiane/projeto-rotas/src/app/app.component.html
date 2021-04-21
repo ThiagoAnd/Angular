@@ -1,24 +1,35 @@
 <mat-toolbar color="primary">
     <mat-toolbar-row>
      
-      <h1  routerLink="/">ProjetoRotas</h1>
+      <h1 class="link" routerLink="/">ProjetoRotas</h1>
       
      
       <span class="menu-spacer"></span>
    
       <div>
-        <a mat-button routerLink="/login"> Login </a>
+        <a mat-button  routerLink="/login"> Login </a>
         <a mat-button routerLink="/cursos"> Cursos </a>
-  
+
+
+        <a mat-button routerLink="/curso/{{idCurso.value}}"> Curso detalhe </a>
+        <a mat-button [routerLink]="['curso',idCurso.value]"> Curso detalhe2 </a>
      
   
       </div>
     </mat-toolbar-row>
   
-    <mat-toolbar-row>
-        <span style="font-size: 12px;">SimpleCRM helps you easily manage your contacts</span>
-      </mat-toolbar-row>
   </mat-toolbar>
-<div class="row">
+<div class="section">
+
+  
+  <p>Entre com o id do curso</p>
+  <input #idCurso type="text">
+
+
+  
+
+
+
+  <br><br>
 <router-outlet></router-outlet>
 </div>
