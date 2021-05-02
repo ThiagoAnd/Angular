@@ -30,6 +30,7 @@ export class CursoDetalheComponent implements OnInit {
         if(this.curso==null){
           this.router.navigate(['/naoEncontrado']);
         }
+        
       }
 
     );
