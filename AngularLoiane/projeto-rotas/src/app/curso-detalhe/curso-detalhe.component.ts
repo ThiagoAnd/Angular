@@ -20,6 +20,9 @@ export class CursoDetalheComponent implements OnInit {
    // this.id = route.snapshot.params['id'];
    }
 
+
+
+   
   ngOnInit(): void {
     this.inscricao = this.route.params.subscribe(
       (params: any) =>{
@@ -30,7 +33,7 @@ export class CursoDetalheComponent implements OnInit {
         if(this.curso==null){
           this.router.navigate(['/naoEncontrado']);
         }
-        
+
       }
 
     );
