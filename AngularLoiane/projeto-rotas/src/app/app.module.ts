@@ -10,6 +10,8 @@ import { CursosComponent } from './cursos/cursos.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
+import {MatDividerModule} from '@angular/material/divider';
+import {MatListModule} from '@angular/material/list';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
     AppRoutingModule,
     NgbModule,
     BrowserAnimationsModule,
-    MatToolbarModule
+    MatToolbarModule,
+    MatDividerModule,
+    MatListModule
   ],
   providers: [],
   bootstrap: [AppComponent]
