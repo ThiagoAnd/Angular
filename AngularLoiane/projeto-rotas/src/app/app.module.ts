@@ -12,6 +12,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { CursoDetalheComponent } from './curso-detalhe/curso-detalhe.component';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatListModule} from '@angular/material/list';
+import { CursoNaoExisteComponent } from './curso-nao-existe/curso-nao-existe.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import {MatListModule} from '@angular/material/list';
     HomeComponent,
     LoginComponent,
     CursosComponent,
-    CursoDetalheComponent
+    CursoDetalheComponent,
+    CursoNaoExisteComponent
   ],
   imports: [
     BrowserModule,
