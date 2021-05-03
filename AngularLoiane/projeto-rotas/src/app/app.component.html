@@ -11,8 +11,11 @@
         <a mat-button routerLink="/cursos"> Cursos </a>
 
 
-        <a mat-button routerLink="/curso/{{idCurso.value}}"> Curso detalhe </a>
-        <a mat-button [routerLink]="['curso',idCurso.value]"> Curso detalhe2 </a>
+        <a mat-button routerLink="/cursos/" [queryParams]="{pagina:1}"> Query params com a rota curso </a>
+
+        
+        <a mat-button routerLink="curso/{{idCurso.value}}"> Curso com outra forma de id </a>
+        <a mat-button [routerLink]="['/curso',idCurso.value]"> Curso com id </a>
      
   
       </div>
